@@ -1,0 +1,2 @@
+ALTER TABLE items ADD deleted_at TIMESTAMP;
+ALTER TABLE shops ADD deleted_at TIMESTAMP;

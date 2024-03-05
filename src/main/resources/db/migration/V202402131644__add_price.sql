@@ -1,0 +1,7 @@
+ALTER TABLE shops ALTER COLUMN name SET NOT NULL;
+
+ALTER TABLE items ALTER COLUMN name SET NOT NULL,
+                           ADD price NUMERIC NOT NULL,
+                  ALTER COLUMN name SET DEFAULT 0;
+
+ALTER TABLE users ALTER COLUMN fullname SET NOT NULL;
