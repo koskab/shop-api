@@ -105,6 +105,9 @@ public class CartServiceImpl implements CartService {
     @Transactional
     public void purchase(){
         User user = userService.getCurrentUser();
+        if(!repository.existsByUser_IdAndIsPaidFalse(user.getId()))
+            throw new NotFoundException("Cart is empty");
+
         List<Cart> carts = repository.findAllByUser_IdAndIsPaidFalse(user.getId());
         BigDecimal cost = carts
                 .stream()
