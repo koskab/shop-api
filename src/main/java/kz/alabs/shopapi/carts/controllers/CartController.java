@@ -58,7 +58,7 @@ public class CartController {
     @Operation(summary = "Return a current users cart info")
     @ApiResponses(value = {
             @ApiResponse(responseCode = "200", description = "Ok", content = {
-                    @Content(mediaType = "application/json", schema = @Schema(implementation = CartView.class))
+                    @Content(mediaType = "application/json", schema = @Schema(implementation = CartResponse.class))
             }),
             @ApiResponse(responseCode = "404", description = "Not found"),
             @ApiResponse(responseCode = "403", description = "Forbidden"),

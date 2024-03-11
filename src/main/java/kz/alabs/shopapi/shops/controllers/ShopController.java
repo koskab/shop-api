@@ -42,7 +42,7 @@ public class ShopController {
     @Operation(summary = "Show shops data")
     @ApiResponses(value = {
             @ApiResponse(responseCode = "200", description = "Ok", content = {
-                    @Content(mediaType = "application/json", schema = @Schema(implementation = ShopView.class))
+                    @Content(mediaType = "application/json", schema = @Schema(implementation = ShopDetails.class))
             }),
             @ApiResponse(responseCode = "400", description = "Bad request"),
             @ApiResponse(responseCode = "404", description = "Not found"),
